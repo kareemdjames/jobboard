@@ -18222,6 +18222,8 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _containers = __webpack_require__(28);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18229,15 +18231,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var style = {
-  jobPost: {
-    padding: 16,
-    background: '#f9f9f9',
-    border: '1px solid #ddd',
-    marginBottom: 24
-  }
-};
 
 var Feed = function (_Component) {
   _inherits(Feed, _Component);
@@ -18265,69 +18258,7 @@ var Feed = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'col-md-8' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Current Jobs'
-            ),
-            _react2.default.createElement(
-              'ol',
-              null,
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { style: style.jobPost },
-                  _react2.default.createElement(
-                    'h4',
-                    null,
-                    'Graphic Designer'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Need someone to create a logo!'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { style: style.jobPost },
-                  _react2.default.createElement(
-                    'h4',
-                    null,
-                    'Programmer'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Need someone to create my startup site!'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { style: style.jobPost },
-                  _react2.default.createElement(
-                    'h4',
-                    null,
-                    'Marketer'
-                  ),
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    'Need someone to promote my startup site!'
-                  )
-                )
-              )
-            )
+            _react2.default.createElement(_containers.Jobs, null)
           ),
           _react2.default.createElement('div', { className: 'col-md-4' })
         )
@@ -18339,6 +18270,147 @@ var Feed = function (_Component) {
 }(_react.Component);
 
 exports.default = Feed;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Jobs = undefined;
+
+var _Jobs = __webpack_require__(29);
+
+var _Jobs2 = _interopRequireDefault(_Jobs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Jobs = _Jobs2.default;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var style = {
+  jobPost: {
+    padding: 16,
+    background: '#f9f9f9',
+    border: '1px solid #ddd',
+    marginBottom: 24
+  }
+};
+
+var Jobs = function (_Component) {
+  _inherits(Jobs, _Component);
+
+  function Jobs() {
+    _classCallCheck(this, Jobs);
+
+    return _possibleConstructorReturn(this, (Jobs.__proto__ || Object.getPrototypeOf(Jobs)).apply(this, arguments));
+  }
+
+  _createClass(Jobs, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Current Jobs'
+        ),
+        _react2.default.createElement(
+          'ol',
+          null,
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'div',
+              { style: style.jobPost },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'Graphic Designer'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Need someone to create a logo!'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'div',
+              { style: style.jobPost },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'Programmer'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Need someone to create my startup site!'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'div',
+              { style: style.jobPost },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'Marketer'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Need someone to promote my startup site!'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Jobs;
+}(_react.Component);
+
+exports.default = Jobs;
 
 /***/ })
 ],[14]);
