@@ -17,8 +17,7 @@ class Jobs extends Component {
     super()
     this.state = {
       jobs: [
-        {id:0, title:'TEST', description:'this is a test job'},
-        {id:1, title:'TEST 2', description:'this is a test job 2'}
+        
       ]
     }
   }
@@ -32,7 +31,12 @@ class Jobs extends Component {
       if (err) {
         alert('Error ' + err.mesasge)
       }
-      console.log('JOBS: ' + JSON.stringify(response.body))
+      const jobs = response.body.data
+      console.log('JOBS: ' + JSON.stringify(jobs))
+
+      this.setState({
+        jobs
+      })
     })
   }
 

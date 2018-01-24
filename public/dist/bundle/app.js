@@ -18340,7 +18340,7 @@ var Jobs = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Jobs.__proto__ || Object.getPrototypeOf(Jobs)).call(this));
 
     _this.state = {
-      jobs: [{ id: 0, title: 'TEST', description: 'this is a test job' }, { id: 1, title: 'TEST 2', description: 'this is a test job 2' }]
+      jobs: []
     };
     return _this;
   }
@@ -18348,12 +18348,19 @@ var Jobs = function (_Component) {
   _createClass(Jobs, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      var _this2 = this;
+
       // Fetch the jobs from the db
       _superagent2.default.get('/api/job').query(null).set('Accept', 'application/json').end(function (err, response) {
         if (err) {
           alert('Error ' + err.mesasge);
         }
-        console.log('JOBS: ' + JSON.stringify(response.body));
+        var jobs = response.body.data;
+        console.log('JOBS: ' + JSON.stringify(jobs));
+
+        _this2.setState({
+          jobs: jobs
+        });
       });
     }
   }, {
