@@ -1,15 +1,6 @@
 import React, { Component } from 'react'
 import superagent from 'superagent'
-
-// Styling Object
-const style = {
-  jobPost: {
-    padding: 16,
-    background: '#f9f9f9',
-    border: '1px solid #ddd',
-    marginBottom: 24
-  }
-}
+import Preview from '../presentation/Preview'
 
 class Jobs extends Component {
 
@@ -48,14 +39,10 @@ class Jobs extends Component {
               { this.state.jobs.map((job, i) => {
                 return (
                   <li key={i}>
-                    <div style={style.jobPost}>
-                      <h4>{job.title}</h4>
-                      <p>{job.description}</p>
-                    </div>
+                    
                   </li>
                 )
               })
-
               }
             </ol>
       </div>

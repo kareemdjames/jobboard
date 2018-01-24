@@ -18313,6 +18313,10 @@ var _superagent = __webpack_require__(31);
 
 var _superagent2 = _interopRequireDefault(_superagent);
 
+var _Preview = __webpack_require__(37);
+
+var _Preview2 = _interopRequireDefault(_Preview);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18320,16 +18324,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// Styling Object
-var style = {
-  jobPost: {
-    padding: 16,
-    background: '#f9f9f9',
-    border: '1px solid #ddd',
-    marginBottom: 24
-  }
-};
 
 var Jobs = function (_Component) {
   _inherits(Jobs, _Component);
@@ -18378,24 +18372,7 @@ var Jobs = function (_Component) {
           'ol',
           null,
           this.state.jobs.map(function (job, i) {
-            return _react2.default.createElement(
-              'li',
-              { key: i },
-              _react2.default.createElement(
-                'div',
-                { style: style.jobPost },
-                _react2.default.createElement(
-                  'h4',
-                  null,
-                  job.title
-                ),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  job.description
-                )
-              )
-            );
+            return _react2.default.createElement('li', { key: i });
           })
         )
       );
@@ -20469,6 +20446,53 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Styling Object
+var style = {
+  jobPost: {
+    padding: 16,
+    background: '#f9f9f9',
+    border: '1px solid #ddd',
+    marginBottom: 24
+  }
+};
+
+exports.default = function (props) {
+
+  var job = props;
+
+  return _react2.default.createElement(
+    'div',
+    { style: style.jobPost },
+    _react2.default.createElement(
+      'h4',
+      null,
+      job.title
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      job.description
+    )
+  );
+};
 
 /***/ })
 ],[14]);
