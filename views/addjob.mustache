@@ -3,11 +3,11 @@
 {{>head}}
 
 <body>
-	<div>
+	<div class="container">
     <h1>Add Job</h1>
-    <form>
-      <input type="text" name="title" placeholder="Title" /><br />
-      <input type="text" name="description" placeholder="Description" /><br />
+    <form action="/api/job" method="post">
+      <input type="text" name="title" placeholder="Title"/> <br />
+      <input type="text" name="description" placeholder="Description"/> <br />
       <button type="submit">Create Job</button>
     </form>
   </div>
