@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import superagent from 'superagent'
 
 // Styling Object
 const style = {
@@ -22,7 +23,18 @@ class Jobs extends Component {
     }
   }
 
-
+  componentDidMount() {
+    // Fetch the jobs from the db
+    superagent.get('/api/job')
+    .query(null)
+    .set('Accept', 'application/json')
+    .end((err, response) => {
+      if (err) {
+        alert('Error ' + err.mesasge)
+      }
+      console.log('JOBS: ' + JSON.stringify(response.body))
+    })
+  }
 
   render() {
     return(
