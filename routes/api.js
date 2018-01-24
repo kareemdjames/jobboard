@@ -24,15 +24,20 @@ router.get('/:resource/:id', function(req, res){
 
 // Job Route
 router.post('/job', function(req, res){
-	// res.json({
-	// 	confirmation: 'success',
-	// 	resource: req.params.resource,
-	// 	query: req.query // from the url query string
-	// })
-	res.json({
-		confirmation: 'success',
-		body: req.body
-	})
+	// Creating job in turbo datastore
+	turbo.create('job', req.body)
+		.then(data => {
+			res.json({
+				confirmation: 'success',
+				data: data
+			})
+		})
+		.catch(err => {
+			res.json({
+				confirmation: 'fail',
+				message: err.message
+			})
+		})
 })
 
 
