@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+// Styling Object
 const style = {
   jobPost: {
     padding: 16,
