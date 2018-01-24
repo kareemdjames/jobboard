@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import store from './stores'
+import Feed from './components/Feed'
 
 const app = (
 	<div>
-		<h1>Job Board App!</h1>	
+		<Feed />
 	</div>
 )
 
