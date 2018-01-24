@@ -5,7 +5,6 @@ class Feed extends Component {
   render() {
     return(
       <div className = "container">
-        <h2>This is the feed component</h2>
         <div className="row">
           <div className="col-md-8">
             <Jobs />

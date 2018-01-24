@@ -37,12 +37,12 @@ class Jobs extends Component {
         <h3>Current Jobs</h3>
             <ol>
               { this.state.jobs.map((job, i) => {
-                return (
-                  <li key={i}>
-                    <Preview {...job}/>
-                  </li>
-                )
-              })
+                  return (
+                    <li key={i}>
+                      <Preview {...job}/>
+                    </li>
+                  )
+                })
               }
             </ol>
       </div>
