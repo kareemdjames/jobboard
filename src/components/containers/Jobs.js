@@ -39,7 +39,7 @@ class Jobs extends Component {
               { this.state.jobs.map((job, i) => {
                 return (
                   <li key={i}>
-                    
+                    <Preview {...job}/>
                   </li>
                 )
               })
