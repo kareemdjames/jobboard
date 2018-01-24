@@ -14,27 +14,37 @@ class Feed extends Component {
     return(
       <div className = "container">
         <h2>This is the feed component</h2>
-        <h3>Current Jobs</h3>
-        <ol>
-          <li>
-            <div style={style.jobPost}>
-              <h4>Graphic Designer</h4>
-              <p>Need someone to create a logo!</p>
-            </div>
-          </li>
-          <li>
-            <div style={style.jobPost}>
-              <h4>Programmer</h4>
-              <p>Need someone to create my startup site!</p>
-            </div>
-          </li>
-          <li>
-            <div style={style.jobPost}>
-              <h4>Marketer</h4>
-              <p>Need someone to promote my startup site!</p>
-            </div>
-          </li>
-        </ol>
+        <div className="row">
+          <div className="col-md-8">
+            <h3>Current Jobs</h3>
+            <ol>
+              <li>
+                <div style={style.jobPost}>
+                  <h4>Graphic Designer</h4>
+                  <p>Need someone to create a logo!</p>
+                </div>
+              </li>
+              <li>
+                <div style={style.jobPost}>
+                  <h4>Programmer</h4>
+                  <p>Need someone to create my startup site!</p>
+                </div>
+              </li>
+              <li>
+                <div style={style.jobPost}>
+                  <h4>Marketer</h4>
+                  <p>Need someone to promote my startup site!</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div className="col-md-4">
+          
+          
+          </div>
+  
+        </div>
+
       </div>
     )
   }

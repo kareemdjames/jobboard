@@ -18260,67 +18260,76 @@ var Feed = function (_Component) {
           'This is the feed component'
         ),
         _react2.default.createElement(
-          'h3',
-          null,
-          'Current Jobs'
-        ),
-        _react2.default.createElement(
-          'ol',
-          null,
+          'div',
+          { className: 'row' },
           _react2.default.createElement(
-            'li',
-            null,
+            'div',
+            { className: 'col-md-8' },
             _react2.default.createElement(
-              'div',
-              { style: style.jobPost },
+              'h3',
+              null,
+              'Current Jobs'
+            ),
+            _react2.default.createElement(
+              'ol',
+              null,
               _react2.default.createElement(
-                'h4',
+                'li',
                 null,
-                'Graphic Designer'
+                _react2.default.createElement(
+                  'div',
+                  { style: style.jobPost },
+                  _react2.default.createElement(
+                    'h4',
+                    null,
+                    'Graphic Designer'
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Need someone to create a logo!'
+                  )
+                )
               ),
               _react2.default.createElement(
-                'p',
+                'li',
                 null,
-                'Need someone to create a logo!'
+                _react2.default.createElement(
+                  'div',
+                  { style: style.jobPost },
+                  _react2.default.createElement(
+                    'h4',
+                    null,
+                    'Programmer'
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Need someone to create my startup site!'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  'div',
+                  { style: style.jobPost },
+                  _react2.default.createElement(
+                    'h4',
+                    null,
+                    'Marketer'
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Need someone to promote my startup site!'
+                  )
+                )
               )
             )
           ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { style: style.jobPost },
-              _react2.default.createElement(
-                'h4',
-                null,
-                'Programmer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Need someone to create my startup site!'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { style: style.jobPost },
-              _react2.default.createElement(
-                'h4',
-                null,
-                'Marketer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Need someone to promote my startup site!'
-              )
-            )
-          )
+          _react2.default.createElement('div', { className: 'col-md-4' })
         )
       );
     }
