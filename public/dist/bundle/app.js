@@ -18333,7 +18333,12 @@ var Jobs = function (_Component) {
   function Jobs() {
     _classCallCheck(this, Jobs);
 
-    return _possibleConstructorReturn(this, (Jobs.__proto__ || Object.getPrototypeOf(Jobs)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Jobs.__proto__ || Object.getPrototypeOf(Jobs)).call(this));
+
+    _this.state = {
+      jobs: [{ id: 0, title: 'TEST', description: 'this is a test job' }, { id: 1, title: 'TEST 2', description: 'this is a test job 2' }]
+    };
+    return _this;
   }
 
   _createClass(Jobs, [{
@@ -18350,60 +18355,26 @@ var Jobs = function (_Component) {
         _react2.default.createElement(
           'ol',
           null,
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { style: style.jobPost },
+          this.state.jobs.map(function (job, i) {
+            return _react2.default.createElement(
+              'li',
+              { key: i },
               _react2.default.createElement(
-                'h4',
-                null,
-                'Graphic Designer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Need someone to create a logo!'
+                'div',
+                { style: style.jobPost },
+                _react2.default.createElement(
+                  'h4',
+                  null,
+                  job.title
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  job.description
+                )
               )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { style: style.jobPost },
-              _react2.default.createElement(
-                'h4',
-                null,
-                'Programmer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Need someone to create my startup site!'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'div',
-              { style: style.jobPost },
-              _react2.default.createElement(
-                'h4',
-                null,
-                'Marketer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Need someone to promote my startup site!'
-              )
-            )
-          )
+            );
+          })
         )
       );
     }
